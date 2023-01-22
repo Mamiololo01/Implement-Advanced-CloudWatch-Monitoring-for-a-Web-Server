@@ -1,0 +1,19 @@
+Download and Run the CloudWatch Logs Installer
+
+Connect to the webserver-01 instance, and install the CloudWatch Logs agent:
+wget -O awslogs-agent-setup.py https://s3.amazonaws.com/aws-cloudwatch/downloads/latest/awslogs-agent-setup.py
+sudo python ./awslogs-agent-setup.py --region us-east-1
+Mark Complete
+
+Configure CloudWatch Logs
+
+Follow the prompts to configure CloudWatch Logs, including opening the IAM console to generate an access key and secret key.
+Copy and paste the below path for the log file to upload: /var/log/apache2/error.log
+Run Progress Check
+
+
+Log in to the CloudWatch Logs Website
+
+Open the CloudWatch Logs website to observe if the log has streamed correctly.
+Also view the contents of the error log in the CLI via: sudo cat /var/log/apache2/error.log
+Mark Complete
